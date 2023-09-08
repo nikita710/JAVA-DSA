@@ -16,6 +16,6 @@ public class Main {
         System.out.println(myBST.root.left.right.left.value);
 
         System.out.println(myBST.contains(42));
-//        System.out.println(myBST.root.value);
+        System.out.println(myBST.rContains(47));
     }
 }

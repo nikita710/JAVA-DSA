@@ -33,6 +33,7 @@ public class BinarySearchTree {
         }
     }
 
+
     public boolean contains(int value) {
         Node temp = root;
         while (temp != null) {
@@ -47,6 +48,25 @@ public class BinarySearchTree {
         return false;
     }
 
+    //Recursion Solution
+    private boolean rContains(Node current, int value) {
+        if (current == null) return false;
+        if (value == current.value) return true;
+        if (value < current.value) {
+            return rContains(current.left, value);
+        } else {
+            return rContains(current.right, value);
+        }
+    }
+
+    public boolean rContains(int value) {
+        return rContains(root, value);
+    }
+
+    private boolean rInsert(int value) {
+        return true;
+    }
+
     class Node {
         int value;
         Node left;
@@ -56,4 +76,5 @@ public class BinarySearchTree {
             this.value = value;
         }
     }
+
 }
